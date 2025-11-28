@@ -111,7 +111,7 @@
     <hazelcast.version>5.3.8</hazelcast.version>
     <hibernate-version>7.1.4.Final</hibernate-version>
     <httpcore.version>4.4.16</httpcore.version>
-    <httpclient.version>5.4.4</httpclient.version>
+    <httpclient.version>5.5.1</httpclient.version>
     <jacoco.version>0.8.14</jacoco.version>
     <jasypt.version>1.9.3</jasypt.version>
     <javac.version>9+181-r4173-1</javac.version>
@@ -133,7 +133,7 @@
     <!-- Maven plugin configuration      -->
     <!-- ================================ -->
     <checkstyle.skip>false</checkstyle.skip>
-    <errorProneFlags></errorProneFlags>
+    <errorProneFlags/>
     <git.commit.runOnlyOnce>true</git.commit.runOnlyOnce>
     <git.commit.useNative>false</git.commit.useNative>
     <lint>deprecation,unchecked</lint>
@@ -151,7 +151,7 @@
     <fork.javac>false</fork.javac>
     <java.awt.headless>true</java.awt.headless>
     <javac.maxHeapSize>256M</javac.maxHeapSize>
-    <jvm.opts></jvm.opts>
+    <jvm.opts/>
     <maven.build.timestamp.format>dd-MMM-yyyy HH:mm</maven.build.timestamp.format>
     <sun.java2d.d3d>true</sun.java2d.d3d>
 
@@ -164,7 +164,7 @@
     <quietTests>true</quietTests>
     <remoteOwsTests>false</remoteOwsTests>
     <test.exclude.pattern>none</test.exclude.pattern>
-    <test.excludedGroups></test.excludedGroups>
+    <test.excludedGroups/>
     <test.maxHeapSize>512M</test.maxHeapSize>
     <windows.leniency>true</windows.leniency>
 
@@ -1891,22 +1891,22 @@
                 <configuration>
                   <target>
                     <loadproperties prefix="gt">
-                      <zipentry name="META-INF/MANIFEST.MF" zipfile="target/dependency/gt-main-${gt.version}.jar"></zipentry>
+                      <zipentry name="META-INF/MANIFEST.MF" zipfile="target/dependency/gt-main-${gt.version}.jar"/>
                     </loadproperties>
                     <loadproperties prefix="gwc">
-                      <zipentry name="META-INF/MANIFEST.MF" zipfile="target/dependency/gwc-core-${gwc.version}.jar"></zipentry>
+                      <zipentry name="META-INF/MANIFEST.MF" zipfile="target/dependency/gwc-core-${gwc.version}.jar"/>
                     </loadproperties>
                     <copy file="release/VERSION.txt" filtering="true" todir="target">
                       <filterset begintoken="$${" endtoken="}">
-                        <filter token="project.version" value="${project.version}"></filter>
-                        <filter token="build.revision" value="${build.commit.id}"></filter>
-                        <filter token="build.branch" value="${build.branch}"></filter>
-                        <filter token="build.timestamp" value="${build.timestamp}"></filter>
-                        <filter token="gt.version" value="${gt.version}"></filter>
-                        <filter token="gt.revision" value="${gt.Git-Revision}"></filter>
-                        <filter token="gwc.version" value="${gwc.version}"></filter>
-                        <filter token="gwc.revision" value="${gwc.Implementation-Version}"></filter>
-                        <filter token="build.hudsonId" value="${build.hudsonId}"></filter>
+                        <filter token="project.version" value="${project.version}"/>
+                        <filter token="build.revision" value="${build.commit.id}"/>
+                        <filter token="build.branch" value="${build.branch}"/>
+                        <filter token="build.timestamp" value="${build.timestamp}"/>
+                        <filter token="gt.version" value="${gt.version}"/>
+                        <filter token="gt.revision" value="${gt.Git-Revision}"/>
+                        <filter token="gwc.version" value="${gwc.version}"/>
+                        <filter token="gwc.revision" value="${gwc.Implementation-Version}"/>
+                        <filter token="build.hudsonId" value="${build.hudsonId}"/>
                       </filterset>
                     </copy>
                   </target>
